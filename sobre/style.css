@@ -1,0 +1,202 @@
+/* INÍCIO ESTILIZAÇÃO BACKGROUND*/
+#container{
+  --bg-url: url(./assets/flores.jpg);
+  background-image: var(--bg-url); /*uso da variável do backgroud*/
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
+
+  /*talvez fosse útil usar clamp(valor minimo do background, valor que eh usado entre o min e 
+  o max - vw = 1% da largura da área visível da janela do navegador -, 
+  maximo tam. do bakcground)*/
+
+}
+/* INÍCIO ESTILIZAÇÃO BACKGROUND*/
+
+
+/* INÍCIO ESTILIZAÇÃO BANNER*/
+.banner {
+  position: initial;
+  width: 100%;
+  height: 200px;
+}
+
+.Imagem_Banner{
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+}
+/* FIM ESTILIZAÇÃO BANNER*/
+
+
+/* INÍCIO ESTILIZAÇÃO NAVBAR*/
+.nav-ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0px;
+  background-color: #ff95aa;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-link{
+  display: block;
+  font-family:"Quantico";
+  text-align: center;
+  color: white;
+  padding: 16px 16px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  background-color: #ff88a6;
+  border-radius: 50px;
+}
+
+.botao {
+  background-color: #ff95aa;
+  border: none;
+  padding: 5px 5px;
+  text-align: center;
+}
+
+.botao:hover{
+  background-color: #ff88a6;
+  border-radius: 50px;
+}
+
+.Imagem_Botao{
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+}
+
+#botao {
+  position: relative;
+}
+
+.dica {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  white-space: nowrap;
+  background-color: #fac6cf;
+  color: white;
+  font-family: "Quantico";
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  z-index: 10;
+  animation: pulsar 1.5s ease-in-out infinite;
+}
+
+@keyframes pulsar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+/* FIM ESTILIZAÇÃO NAVBAR*/
+
+
+/* INÍCIO ESTILIZAÇÃO NOME*/
+.nome{
+  font-family:"Quantico";
+  text-align: center;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--text-color); /* Aqui você define a cor roxa */
+  font-size: 40px;
+  margin-top: 0px;
+  padding-top: 100px;
+  padding-bottom: 70px;
+}
+/* FIM ESTILIZAÇÃO NOME*/
+
+
+/* INÍCIO ESTILIZAÇÃO TEXTO (São todos os textos do site e os títulos, pra não ficar muito bagunçado)*/
+.main_doc{
+  font-family: "Domine";
+}
+/* FIM ESTILIZAÇÃO TEXTO*/
+
+
+/*INÍCIO DA CONFIGURAÇÃO GERAL DOS TEXTOS E TÍTULOS*/
+.titulo{
+  text-align: center;
+  font-size: 30px;
+}
+
+.texto{
+  text-align: justify;
+  margin-right: 30px;
+  font-size: 24px;
+}
+/*FIM DA CONFIGURAÇÃO GERAL DOS TEXTOS E TÍTULOS*/
+
+
+/* INÍCIO ESTILIZAÇÃO FOTO DE PERFIL*/
+#foto_perfil {
+  width: 200px;
+  height: 0px;
+  margin-bottom: 200px;
+  margin-left: 20px;
+}
+
+#foto_perfil img{
+  padding: 0px;
+  text-align:center; /*não funciona pra elementos do tipo block, pois ele tem que considerar toda a largura*/
+  border: 3.5px solid  #ff7591;
+  border-radius: 200px;
+  width: 200px;
+}
+/* FIM ESTILIZAÇÃO FOTO DE PERFIL*/
+
+
+/* INÍCIO ESTILIZAÇÃO DA SEÇÃO SOBRE*/
+.sobre{
+  background-color: #ffffff75;
+  border: 3.5px solid  #ff759140;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 80px auto 200px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.conteudo_sobre{
+   display: flex;
+   align-items: center; /* alinha foto e texto verticalmente no centro */
+   gap: 60px;
+}
+/* FIM ESTILIZAÇÃO DA SEÇÃO SOBRE*/
+
+
+.interesses{
+  background-color: #ffffff75;
+  border: 3.5px solid  #ff759140;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 100px auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 20px;
+}
+
+.conteudo_interesses{
+   display: flex;
+   align-items: center; /* alinha foto e texto verticalmente no centro */
+   gap: 100px;
+}
+
+.canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+}

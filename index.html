@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--definindo um documento html -->
+<html lang="pt" class="">
+  <!--root element-->
+  <!--dois nós, nós filhos/-->
+  <head>
+    <!--ajustar configurações do documento, não visíveis ao usuário-->
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Artifika&display=swap");
+    </style>
+
+    <meta charset="UTF-8" />
+    <!--caractéres usados no programa. Aqui diz que ela aceita caractéres diferentes-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- parte visível ao usuário -->
+    <title>Julia Meireles Gontijo</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./main_geral.js" defer></script>
+  </head>
+
+  <body>
+    <!--div é um elemento block-->
+    <div id="container">
+      <div id="profile">
+        <!--image é um elemento in line-->
+        <img
+          src="./assets_figma/Design sem nome(4)(1).png"
+          alt="Menina de cabelos longos, no sol. Usa um óculos de grau estilo Rayban"
+        />
+
+        <p class="artifika-regular">@jubs__meireles</p>
+
+        <!--alt serve como uma descição verbal da imagem-->
+      </div>
+
+      <div id="switch">
+        <button id="botao-tema" aria-label="Alternar modo claro/escuro"></button>
+        <span></span>
+      </div>
+
+      <ul>
+        <li>
+          <a href="./sobre/index.html" class="artifika-regular">Sobre mim 🌸</a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/Julia-Meireles"
+            class="artifika-regular"
+            target="_blank"
+            >GitHub</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/julia-meireles-gontijo-5a85a72ab/"
+            class="artifika-regular"
+            target="_blank"
+            >Linkedin</a
+          >
+        </li>
+      </ul>
+
+      <div id="social-links">
+        <a href="https://github.com/Julia-Meireles" target="_blank">
+          <ion-icon name="logo-github"></ion-icon>
+        </a>
+
+        <a href="https://www.linkedin.com/in/julia-meireles-gontijo-5a85a72ab/">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+      </div>
+
+      <!-- <footer>
+      frase < a href="link" restante da frase.
+      </footer>-->
+    </div>
+    <!-- id é o identificador do elemento div, chamado de container -->
+  </body>
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
+</html>

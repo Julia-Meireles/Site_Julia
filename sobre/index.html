@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--definindo um documento html -->
+<html lang="pt" class="">
+  <!--root element-->
+  <!--dois nós, nós filhos/-->
+  <head>
+    <!--ajustar configurações do documento, não visíveis ao usuário-->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap');
+    </style>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    </style>
+
+    <meta charset="UTF-8" />
+    <!--caractéres usados no programa. Aqui diz que ela aceita caractéres diferentes-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- parte visível ao usuário -->
+    <title>Julia Meireles Gontijo</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+
+    <div class="banner">
+        <img src="assets/arvore.jpg" alt="Imagem vista de baixo dos grandes galhos de uma cerejeira florida ao sol" class="Imagem_Banner">
+    </div>
+
+    <nav class="navbar">
+        <header>
+            <ul class="nav-ul">
+                <div id = "botao">
+                    <button class = "botao" id = "botao_Sakura">
+                        <img src="assets/sakura.png" alt="Uma flor de cerejeira" class = "Imagem_Botao">
+                    </button>
+                    <span class="dica" id="dica_Sakura">clique na florzinha! 🌸</span>
+                </div>
+
+                <li class="nav_li">
+                    <a class="nav-link" href="#nome">Início</a>
+                </li>
+                <li class="nav_li">
+                    <a class="nav-link" href="#sobre">Sobre</a>
+                </li>
+                <li class="nav_li">
+                    <a class="nav-link" href="#interesses">Interesses</a>
+                </li>
+            </ul>
+        </header>
+    </nav>
+
+    <div id="container">
+
+        <div id="nome">
+            <h1 class = "nome"> Julia Meireles Gontijo </h1>
+        </div>
+
+        <main class = "main_doc" id = "maindoc">
+            <div class = "sobre">
+                <section id = "sobre">
+
+                    <header>
+                        <p class = "titulo"> Sobre </p>
+                    </header>
+
+                    <div class = "conteudo_sobre">
+                        <div id="foto_perfil">
+                            <!--image é um elemento in line-->
+                            <img
+                            src="./assets/foto_Julia.png"
+                            alt="Menina de cabelos longos sorrindo de orelha a orelha. Ela está em frente ao espelho, segurando um celular com as duas mãos. Está usando um óculos de grau redondo."
+                            />
+                            <!--alt serve como uma descição verbal da imagem-->
+                        </div>
+
+                        <div class = "texto">
+                            <p>  
+                                Oii! Me chamo Julia Meireles, tenho 20 anos e sou estudante no curso de Engenharia da Computação no Centro Federal de Educação de Minas Gerais (CEFET-MG). 
+                            <p>
+                                Meu objetivo é conhecer cada vez mais os pormenores das modernidades que nos circundam, a fim de um dia ser capaz de formar um equilíbrio entre o grande conteúdo teórico de diversas áreas (tecnologia, matemática, biologia, física, etc) e as minhas ideias, a fim de revolucionar, quem sabe, o futuro do mundo.
+                            </p>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+
+            <div class = "interesses">
+                <section id = "interesses">
+                    <header>
+                        <p class = "titulo"> Projetos e Interesses </p>
+                    </header>
+
+                    <div class = "conteudo_interesses">
+                        <div class = "texto">
+                                <p>  
+                                    Em relação aos projetos, já participei de vários na faculdade: empresa júnior, grupo PET, grupo de competição iniciação científica, etc. Mas ainda tenho alguns desejos a adicionar a essa lista, entre eles: professora voluntária para alunos carentes, mais iniciações científicas que envolvam temas do meu espectro de interesse (eletrônica, computação quântica, dados, design, desenvolvimento de softwares... sim, é bem amplo, pode ser praticamente qualquer coisa, menos marketing), intercâmbios, alguma equipe de competição (talvez), entre outras coisas.
+                                </p>
+                                <p>  
+                                    Já em relação aos interesses, eu amo bichinhos. Tenho dois gatinhos, a Mel e a Cacau. Espero que um dia eu possa ter um jardim bem grande com gatinhos, cachorros, galinhas, coelhos, alguns cavalos e quem sabe até uma vaca! Seria incrível.
+                                </p>
+                            </div>
+                    </div>
+                    
+                </section>
+            </div>
+            
+        </main>
+    </div>
+    <canvas class = "canvas"></canvas>
+    <script type = "text/javascript" src="./main.js"></script>
+
+  </body>
+ 
+</html>

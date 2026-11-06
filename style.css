@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: indigo;
+  --bg-url: url(./assets_figma/background.jpg);
+  --background--button: rgb(199, 120, 255, 0.3);
+  --border--button: 1px solid rgb(199, 120, 255);
+  --background-button-hover: rgb(199, 120, 255, 0.15);
+  --border-button-hover: 1.5px solid rgb(157, 0, 255);
+  --social-links-color: rgb(86, 0, 123);
+  --social-links-color-hover: rgba(193, 126, 255, 0.286);
+  --button: white url(./assets_figma/Sun.svg) no-repeat center;
+}
+.night {
+  --text-color: white;
+  --bg-url: url(./assets_figma/teste.jpg);
+  --background--button: rgba(255, 170, 230, 0.282);
+  --border--button: 1px solid rgb(255, 131, 195);
+  --background-button-hover: rgba(255, 170, 230, 0.148);
+  --border-button-hover: 1.5px solid rgb(255, 131, 195);
+  --social-links-color: white;
+  --social-links-color-hover: rgba(255, 170, 230, 0.148);
+  --button: white url(./assets_figma/Mediamodifier-Design.svg) no-repeat center;
+}
+
+body {
+  /*background-image: url(./assets_figma/bg-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;*/
+
+  background: var(--bg-url) no-repeat top center/cover;
+}
+
+.artifika-regular {
+  font-family: "Artifika", serif;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--text-color); /* Aqui você define a cor roxa */
+  font-size: 24px;
+  margin-top: 8px;
+}
+
+ul {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/*identificador de id, seletor de id*/
+#container {
+  width: 336px;
+  min-height: 712px;
+  /*border: 20px solid pink;*/
+  margin: 56px auto 0px;
+  padding: 0 24px;
+  /*ou: margin: auto
+  faz os dois automaticamente dos lados
+  só pode ser aplicada em objetos do tipo block, então se eu quisesse aplicar aqui teria que transformar esse elemento em block*/
+  /*você também pode usar o display inline-block, o elementoo fica sendo inline, mas permite algumas características para o tipo block*/
+
+  /*margin possui algumas outras propriedades.
+  se você tem 1 característica que gostaria de aplicar, ele aplica em todos os lados: top -> rigth -> left -> bottom
+  se você tem 2, ele aplica 1 no top e no bottom e a outra nas laterais
+  se você tem 3 propriedades ele aplica a primeira no top, a segunda nas laterais e a terceira no bottom
+  por fim, se você tem 4 propriedades ele aplica na ordem: top -> right -> bottom -> left, as 4 características (sentido horário)*/
+}
+
+/*profile*/
+/*pai do profile: os filhos inline de profile aceitam o que o pai diz, os elementos devem ser center, left ou right. Se ele fosse um elemento do tip block, ele não aceita os comandos do pai.*/
+#profile {
+  text-align: center; /*não funciona pra elementos do tipo block, pois ele tem que considerar toda a largura*/
+  padding: 24px;
+}
+
+#profile img {
+  width: 112px;
+}
+
+/* ouu:
+#profile img {
+  display: block; dá toda a largura de tela possível. Faz com que os elementos fiquem embaixo do container
+  display none: some tudo.
+  width: 11 2px;
+  margin: auto;
+}*/
+
+/*swicth*/
+
+#switch {
+  width: 64px;
+  position: relative;
+
+  margin: 4px auto;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: var(--button);
+  border: 0;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.night #switch button {
+  right: 0;
+  left: initial;
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--background--button);
+  border: var(--border--button);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
+
+/* Lista de links*/
+ul {
+  list-style: none;
+  /*aqui também se pode aplicar o display flex, ele por padrão é aplicado em colunas
+  o gap aqui é um preenchimento entre as colunas/linhas do display
+  o gap não faz sentido num ul li a, pois esse elemento possui apenas um conteúdo, ou seja, não tem como dar espaço entre os conteúdos com só um conteúdo*/
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 0;
+}
+
+ul li a {
+  display: flex; /*o display block também faz ocupar todo o container*/
+  justify-content: center; /*text-align: center pode ser usado aqui tambem porque é um texto*/
+  align-items: center;
+  padding: 16px 24px;
+  background: var(--background--button);
+  border: var(--border--button);
+  border-radius: 50px;
+  -webkit-backdrop-filter: blur(
+    4px
+  ); /*-webkit: prefixo usado para que alguns browsers liberem*/
+  text-decoration: none;
+  transition: backgroud 0.5s;
+}
+/*só o ul li: ocupa todo o espaço do container
+o ul li a, ocupa o espaço da palavra, do que está escrito*/
+
+/*pseudo-colector*/
+ul li a:hover {
+  background: var(--background-button-hover);
+  border: var(--border-button-hover);
+}
+
+/*OBSs:*/
+/* o * serve para dizer que vai ser aplicado no body todo*/
+
+/*socil links*/
+#social-links {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
+  font-size: 24px;
+}
+
+#social-links a {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  color: var(--social-links-color);
+  justify-content: center;
+  transition: background 0.2s;
+  border-radius: 50%;
+}
+
+#social-links a:hover {
+  background: var(--social-links-color-hover);
+}
+
+/*footer{
+  padding: 24px 0;
+  text-align: center;
+}*/
